@@ -1,10 +1,15 @@
 package com.ahmed.groceriesapp.navigation
 
+import android.util.Log
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
+import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.navigation
+import com.ahmed.groceriesapp.navigation.NestedGraphs.AUTH
 import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 
 
@@ -13,7 +18,7 @@ fun SetUpNavigation(navController:NavHostController) {
     NavHost(navController = navController,startDestination = Screens.Splash.route ){
         composable(route = Screens.Splash.route){
             SplashScreen{
-                navController.navigate(Screens.Home.route){
+                navController.navigate(AUTH){
                     popUpTo(Screens.Splash.route){
                         inclusive = true
                     }
@@ -23,6 +28,15 @@ fun SetUpNavigation(navController:NavHostController) {
         }
         composable(route = Screens.Home.route){
             Text(text = "HelloHome screen")
+        }
+        loginGraph(navController = navController)
+    }
+}
+
+fun NavGraphBuilder.loginGraph(navController: NavController) {
+    navigation(startDestination = AuthScreens.Login.route, route = "auth") {
+        composable(AuthScreens.Login.route) {
+            Text(text = "login")
         }
     }
 }
