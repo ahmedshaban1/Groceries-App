@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -15,10 +16,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             GroceriesAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android shaban")
-                }
+               SplashScreen()
             }
         }
     }
@@ -33,6 +31,6 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     GroceriesAppTheme {
-        Greeting("Android")
+       SplashScreen()
     }
 }
