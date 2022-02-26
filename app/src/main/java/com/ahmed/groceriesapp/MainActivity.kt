@@ -12,7 +12,9 @@ import androidx.navigation.compose.rememberNavController
 import com.ahmed.groceriesapp.navigation.SetUpNavigation
 import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

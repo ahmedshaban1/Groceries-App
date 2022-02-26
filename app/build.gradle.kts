@@ -3,6 +3,9 @@ import Versions.compose
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("dagger.hilt.android.plugin")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -64,10 +67,18 @@ dependencies {
     implementation(Deps.lifeCycle)
     implementation(Deps.composeActivity)
     implementation(Deps.composeNavigation)
+    implementation(Deps.hiltViewModel)
+    kapt(Deps.hiltCompiler)
+    implementation(Deps.hiltCompiler)
+    implementation(Deps.hitlNavigation)
+    implementation(Deps.daggerHiltAndroid)
+    kapt(Deps.daggerCompiler)
+
     testImplementation(Deps.testJunit)
     androidTestImplementation(Deps.androidTestJunit)
     androidTestImplementation(Deps.espressoTest)
     androidTestImplementation(Deps.composeUiTest)
     debugImplementation(Deps.debugCompose)
+
 
 }

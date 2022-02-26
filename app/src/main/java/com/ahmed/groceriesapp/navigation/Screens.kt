@@ -6,7 +6,9 @@ sealed class Screens(val route:String) {
 }
 
 sealed class AuthScreens(val route: String){
+    object GetStarted:AuthScreens("get_started")
     object Login:AuthScreens("login")
+    object Register:AuthScreens("register")
 }
 
 object NestedGraphs{

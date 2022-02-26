@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Groceries App</string>
+    <string name="welcome_to_our_store">Welcome\nto our store</string>
+    <string name="get_started_hint">Get your groceries as fast as one hour</string>
 </resources>
