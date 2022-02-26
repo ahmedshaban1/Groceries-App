@@ -8,6 +8,8 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.ahmed.groceriesapp.navigation.SetUpNavigation
 import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 
@@ -16,21 +18,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             GroceriesAppTheme {
-               SplashScreen()
+                val navController = rememberNavController()
+                SetUpNavigation(navController = navController)
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    GroceriesAppTheme {
-       SplashScreen()
     }
 }

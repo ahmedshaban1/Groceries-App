@@ -1,5 +1,6 @@
 object Versions {
 
+    const val composeNavigation = "2.5.0-alpha03"
     const val espressoTest: String = "3.4.0"
     const val androidTest: String = "1.1.3"
     const val composeActivity ="1.4.0"

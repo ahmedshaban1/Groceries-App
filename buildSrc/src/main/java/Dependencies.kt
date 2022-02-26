@@ -23,6 +23,7 @@ object Deps {
     val espressoTest by lazy { "androidx.test.espresso:espresso-core:${Versions.espressoTest}" }
     val composeUiTest by lazy { "androidx.compose.ui:ui-test-junit4:${Versions.compose}" }
     val debugCompose by lazy { "androidx.compose.ui:ui-tooling:${Versions.compose}" }
+    val composeNavigation by lazy { "androidx.navigation:navigation-compose:${Versions.composeNavigation}" }
 
 }
 

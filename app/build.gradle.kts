@@ -63,9 +63,11 @@ dependencies {
     implementation(Deps.composePreView)
     implementation(Deps.lifeCycle)
     implementation(Deps.composeActivity)
+    implementation(Deps.composeNavigation)
     testImplementation(Deps.testJunit)
     androidTestImplementation(Deps.androidTestJunit)
     androidTestImplementation(Deps.espressoTest)
     androidTestImplementation(Deps.composeUiTest)
     debugImplementation(Deps.debugCompose)
+
 }
