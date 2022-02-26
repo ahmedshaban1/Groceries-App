@@ -2,6 +2,7 @@ package com.ahmed.groceriesapp.ui.screens.auth
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -23,6 +24,7 @@ import com.ahmed.groceriesapp.R.string.*
 import com.ahmed.groceriesapp.navigation.AuthScreens
 import com.ahmed.groceriesapp.navigation.AuthScreens.Login
 import com.ahmed.groceriesapp.ui.common.GButton
+import com.ahmed.groceriesapp.ui.common.VerticalSpacer
 import com.ahmed.groceriesapp.ui.screens.auth.AuthUiState.Navigation
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 import kotlinx.coroutines.flow.collect
@@ -50,15 +52,15 @@ fun GetStartedScreen(viewModel: AuthViewModel= hiltViewModel(),naveTo:(AuthScree
                     style = typography.h3.copy(color = Color.White),
                     textAlign = TextAlign.Center
                 )
-                Spacer(modifier = Modifier.height(10.dp))
+               VerticalSpacer()
                 Text(text = stringResource(id = get_started_hint),
                     style = typography.h6.copy(color = Color.White,fontSize = 14.sp),
                     textAlign = TextAlign.Center)
-                Spacer(modifier = Modifier.height(10.dp))
+               VerticalSpacer()
                 GButton(text = "Get Started",modifier = Modifier.fillMaxWidth(fraction = .6f)) {
                     viewModel.onEvent(Navigation(Login))
                 }
-                Spacer(modifier = Modifier.height(50.dp))
+                VerticalSpacer(50.dp)
 
             }
         }
