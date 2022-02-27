@@ -1,4 +1,4 @@
-package com.ahmed.groceriesapp.ui.screens.auth
+package com.ahmed.groceriesapp.ui.screens.auth.data.presentation
 
 import com.ahmed.groceriesapp.bases.BaseViewModel
 import com.ahmed.groceriesapp.navigation.AuthScreens

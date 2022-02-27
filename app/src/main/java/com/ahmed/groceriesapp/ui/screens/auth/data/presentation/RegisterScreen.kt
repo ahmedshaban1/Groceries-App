@@ -1,4 +1,4 @@
-package com.ahmed.groceriesapp.ui.screens.auth
+package com.ahmed.groceriesapp.ui.screens.auth.data.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -16,13 +16,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.ahmed.groceriesapp.R
 import com.ahmed.groceriesapp.navigation.AuthScreens
 import com.ahmed.groceriesapp.ui.common.*
-import com.ahmed.groceriesapp.ui.screens.auth.AuthUiState.Navigation
+import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.AuthUiState.Navigation
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 import com.ahmed.groceriesapp.ui.theme.spacing
 import kotlinx.coroutines.flow.collect
 
 @Composable
-fun RegisterScreen(viewModel: AuthViewModel = hiltViewModel(),naveTo:(AuthScreens)->Unit) {
+fun RegisterScreen(viewModel: AuthViewModel = hiltViewModel(), naveTo:(AuthScreens)->Unit) {
     Column(
         Modifier
             .fillMaxSize()

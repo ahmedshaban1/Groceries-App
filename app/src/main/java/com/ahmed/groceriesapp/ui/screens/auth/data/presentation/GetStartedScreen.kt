@@ -1,8 +1,7 @@
-package com.ahmed.groceriesapp.ui.screens.auth
+package com.ahmed.groceriesapp.ui.screens.auth.data.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -25,12 +24,12 @@ import com.ahmed.groceriesapp.navigation.AuthScreens
 import com.ahmed.groceriesapp.navigation.AuthScreens.Login
 import com.ahmed.groceriesapp.ui.common.GButton
 import com.ahmed.groceriesapp.ui.common.VerticalSpacer
-import com.ahmed.groceriesapp.ui.screens.auth.AuthUiState.Navigation
+import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.AuthUiState.Navigation
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 import kotlinx.coroutines.flow.collect
 
 @Composable
-fun GetStartedScreen(viewModel: AuthViewModel= hiltViewModel(),naveTo:(AuthScreens)->Unit) {
+fun GetStartedScreen(viewModel: AuthViewModel = hiltViewModel(), naveTo:(AuthScreens)->Unit) {
     Scaffold(Modifier.fillMaxSize()) {
         LaunchedEffect(key1 = true){
             viewModel.uiStateEvent.collect {
