@@ -10,6 +10,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.ahmed.groceriesapp.navigation.NestedGraphs.AUTH
 import com.ahmed.groceriesapp.ui.screens.auth.GetStartedScreen
+import com.ahmed.groceriesapp.ui.screens.auth.LoginScreen
+import com.ahmed.groceriesapp.ui.screens.auth.RegisterScreen
 import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 
 
@@ -41,10 +43,14 @@ fun NavGraphBuilder.loginGraph(navController: NavController) {
             }
         }
         composable(AuthScreens.Login.route){
-            Text(text = "Login")
+            LoginScreen{
+                navController.navigate(it.route)
+            }
         }
         composable(AuthScreens.Register.route){
-            Text(text = "Regsiter")
+            RegisterScreen{
+                navController.popBackStack()
+            }
         }
     }
 }

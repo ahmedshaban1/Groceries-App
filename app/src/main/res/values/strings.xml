@@ -2,4 +2,11 @@
     <string name="app_name">Groceries App</string>
     <string name="welcome_to_our_store">Welcome\nto our store</string>
     <string name="get_started_hint">Get your groceries as fast as one hour</string>
+    <string name="login">Login</string>
+    <string name="login_hint">Enter Your name and password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_register_info">Enter your information to continue</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="email">Email</string>
+    <string name="policy">By continuing you agree to our Terms of Service and Privacy Policy.</string>
 </resources>
