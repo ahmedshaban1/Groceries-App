@@ -30,6 +30,12 @@ object Deps {
     val hitlNavigation = "androidx.hilt:hilt-navigation-compose:1.0.0"
     val daggerHiltAndroid = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
     val daggerCompiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
+    val roomRunTime = "androidx.room:room-runtime:${Versions.room}"
+    val roomCompiler = "androidx.room:room-compiler:${Versions.room}"
+    var roomExtension= "androidx.room:room-ktx:${Versions.room}"
 
 }
+
+
+
 

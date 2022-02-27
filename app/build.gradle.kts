@@ -73,6 +73,10 @@ dependencies {
     implementation(Deps.hitlNavigation)
     implementation(Deps.daggerHiltAndroid)
     kapt(Deps.daggerCompiler)
+    implementation(Deps.roomRunTime)
+    kapt(Deps.roomCompiler)
+    implementation(Deps.roomExtension)
+
 
     testImplementation(Deps.testJunit)
     androidTestImplementation(Deps.androidTestJunit)
