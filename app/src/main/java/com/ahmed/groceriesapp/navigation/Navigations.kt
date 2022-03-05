@@ -9,9 +9,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import com.ahmed.groceriesapp.navigation.NestedGraphs.AUTH
-import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.GetStartedScreen
-import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.LoginScreen
-import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.RegisterScreen
+import com.ahmed.groceriesapp.ui.screens.auth.presentation.GetStartedScreen
+import com.ahmed.groceriesapp.ui.screens.auth.presentation.LoginScreen
+import com.ahmed.groceriesapp.ui.screens.auth.presentation.RegisterScreen
 import com.ahmed.groceriesapp.ui.screens.splash.SplashScreen
 
 

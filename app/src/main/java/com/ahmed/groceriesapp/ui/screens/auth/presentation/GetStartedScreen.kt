@@ -1,4 +1,4 @@
-package com.ahmed.groceriesapp.ui.screens.auth.data.presentation
+package com.ahmed.groceriesapp.ui.screens.auth.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -24,7 +24,7 @@ import com.ahmed.groceriesapp.navigation.AuthScreens
 import com.ahmed.groceriesapp.navigation.AuthScreens.Login
 import com.ahmed.groceriesapp.ui.common.GButton
 import com.ahmed.groceriesapp.ui.common.VerticalSpacer
-import com.ahmed.groceriesapp.ui.screens.auth.data.presentation.AuthUiState.Navigation
+import com.ahmed.groceriesapp.ui.screens.auth.presentation.AuthUiState.Navigation
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 import kotlinx.coroutines.flow.collect
 

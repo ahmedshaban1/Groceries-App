@@ -10,9 +10,9 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface UserDao {
     @Query("select * from user where email=:email and password=:password")
-    fun login(email:String,password:String) : Flow<User>
+    fun login(email:String,password:String) : User
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    fun register(user: User) : Long
+    fun register(user: User)
 
 }
