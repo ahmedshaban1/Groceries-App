@@ -1,8 +1,10 @@
 package com.ahmed.groceriesapp.ui.screens.auth.presentation
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -15,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ahmed.groceriesapp.R
+import com.ahmed.groceriesapp.model.resourec.Resource
 import com.ahmed.groceriesapp.navigation.AuthScreens
 import com.ahmed.groceriesapp.navigation.AuthScreens.Register
 import com.ahmed.groceriesapp.ui.common.*
@@ -22,6 +25,7 @@ import com.ahmed.groceriesapp.ui.screens.auth.presentation.AuthUiState.Navigatio
 import com.ahmed.groceriesapp.ui.theme.GroceriesAppTheme
 import com.ahmed.groceriesapp.ui.theme.spacing
 import kotlinx.coroutines.flow.collect
+import kotlin.math.log
 
 @Composable
 fun LoginScreen(viewModel: AuthViewModel = hiltViewModel(), naveTo: (AuthScreens) -> Unit) {
@@ -32,12 +36,22 @@ fun LoginScreen(viewModel: AuthViewModel = hiltViewModel(), naveTo: (AuthScreens
             .padding(MaterialTheme.spacing.medium)
     )
     {
+        val login by viewModel.loginState.collectAsState()
         LaunchedEffect(key1 = Unit) {
             viewModel.uiStateEvent.collect { event ->
                 when (event) {
                     is Navigation -> naveTo(event.screen)
                 }
             }
+        }
+        if(login is Resource.Loading){
+            CircularProgressIndicator()
+        }
+        if(login is Resource.Error){
+           Text(text = "Error ${(login as Resource.Error).errorCode}")
+        }
+        if(login is Resource.Success){
+            Text(text = "Success ${(login as Resource.Success).data}")
         }
         LoginRegisterHeader(
             title = stringResource(R.string.login),
