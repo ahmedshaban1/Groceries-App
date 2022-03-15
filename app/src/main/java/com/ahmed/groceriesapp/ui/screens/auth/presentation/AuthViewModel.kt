@@ -20,7 +20,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AuthViewModel @Inject constructor(
-    private val loginUserCase: UserLoginUserCase
+    private val loginUserCase: UserLoginUserCase,
+    private val user:User
 ) : BaseViewModel<AuthUiState>(){
     private val _loginState = MutableStateFlow<Resource<User>>(value = Resource.Init)
     val loginState = _loginState.asStateFlow()

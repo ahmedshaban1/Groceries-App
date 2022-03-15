@@ -2,6 +2,7 @@ package com.ahmed.groceriesapp.datasources.local.room
 
 import android.content.Context
 import androidx.room.Room
+import com.ahmed.groceriesapp.model.user.User
 import com.ahmed.groceriesapp.ui.screens.auth.data.local.UserDao
 import dagger.Module
 import dagger.Provides
@@ -24,5 +25,11 @@ object DataBaseModule {
     @Provides
     fun providesUserDao(db: DataBase): UserDao {
         return db.getUserDao()
+    }
+
+    @Provides
+    @Singleton
+    fun providesUser(dao:UserDao): User {
+        return dao.login("ahmed@ahmed.com","12345678")
     }
 }
